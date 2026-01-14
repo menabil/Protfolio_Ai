@@ -1,6 +1,12 @@
 const Header = () => {
   return (
-    <>
+    <div class="antialiased selection:bg-accent-purple selection:text-white relative">
+      <div class="grain-overlay"></div>
+
+      <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-accent-purple/10 rounded-full blur-[100px] animate-slow-blob opacity-30"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[30rem] h-[30rem] bg-accent-blue/10 rounded-full blur-[100px] animate-slow-blob animation-delay-2000 opacity-30"></div>
+      </div>
       <nav class="fixed w-full z-50 top-0 px-6 py-4 relative z-20">
         <div class="max-w-6xl mx-auto flex justify-between items-center glass-card px-6 py-3 rounded-full">
           <a href="#" class="text-lg font-bold tracking-tight text-white">
@@ -25,7 +31,7 @@ const Header = () => {
           </a>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
